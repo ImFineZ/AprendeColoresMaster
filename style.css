@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #FFC300;
+}
+
+.main-section {
+  /*display: flex;*/
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#titulo-pagina {
+  text-align: center;
+  font-size: 3rem;
+  letter-spacing: .15em;
+  color: #333;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+#contenedor-imagen {
+  width: 80%;
+  max-width: 400px;
+  display: block;
+  margin: 0 auto 2rem;
+}
+
+#boton-jugar {
+  background-color: #ff6f61;
+  border: none;
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+#boton-jugar:hover {
+  background-color: #ff493d;
+}
+
+.maquina-escribir{
+  
+  font-size: 48px;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  overflow: hidden;
+  letter-spacing: .15em;
+  animation: escribir 2s steps(40, end), blink-caret .75s step-end infinite;
+}
+@keyframes escribir{
+  from {width:0 }
+  to { width: 100% } 
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent;}
+  50% { border-color: orange}
+}
